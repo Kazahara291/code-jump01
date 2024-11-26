@@ -1,5 +1,10 @@
 @use "_global.scss" as g;
 
+body { 
+    color: #383e45;
+    font-size: 0.9rem;
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto 100px;
@@ -9,8 +14,4 @@
 
 img {
     max-width: 100%;
-}
-
-main {
-    
 }

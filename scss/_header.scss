@@ -6,7 +6,8 @@ html {
 
 header {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header ul li a {
@@ -19,19 +20,24 @@ h1 img {
     padding: 10px 0;
 }
 
+h1 a {
+    display: block;
+}
+
 ul {
     display: flex;
-    align-items: center;
+    padding: 10px 0;
 }
 
 li {
     list-style: none;
+    margin-left: 30px;
 }
 
-a {
+header ul li a {
     text-decoration: none;
 }
 
-a:hover {
+header ul li a:hover {
     opacity: 0.7;
 }
