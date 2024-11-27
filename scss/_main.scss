@@ -10,3 +10,16 @@
     height: 600px;
     object-fit: cover;
 }
+
+@include g.breakpoint( profile ) {
+    .mainvisual img {
+        height: calc(100vh - 60px);
+    }
+
+    #about .content {
+        flex-direction: column;
+      }
+    #about img {
+        margin-right: 0;
+    }
+}

@@ -1,11 +1,16 @@
 @mixin breakpoint( $point ) {
     @if $point == tab {
-      @media ( min-width: 600px ) {
+      @media  ( min-width: 600px ) {
         @content ;
       }
     }
     @if $point == pc {
       @media ( min-width: 769px ) {
+        @content ;
+      }
+    }
+    @if $point == profile {
+      @media screen and ( max-width: 600px ) {
         @content ;
       }
     }
