@@ -1,8 +1,17 @@
+@use "_global.scss" as g;
+
 .bycycle ul {
    display: flex;
    justify-content: space-between;
+   @include g.breakpoint( pc-wide ) {
+            flex-direction: column;
+        }
 }
 
 .bycycle li {
     width: 32%;
+    @include g.breakpoint( pc-wide ) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
 }

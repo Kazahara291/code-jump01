@@ -9,7 +9,7 @@
         @content ;
       }
     }
-    @if $point == profile {
+    @if $point == pc-wide {
       @media screen and ( max-width: 600px ) {
         @content ;
       }

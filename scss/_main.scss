@@ -9,27 +9,8 @@
     max-width: 1920px;
     height: 600px;
     object-fit: cover;
-}
-
-@include g.breakpoint( profile ) {
-    .mainvisual img {
+    @include g.breakpoint ( pc-wide ) {
         height: calc(100vh - 60px);
     }
-
-    .about .content {
-        flex-direction: column;
-      }
-    .about img {
-        margin-right: 0;
-    }
-
-    .bycycle ul {
-        flex-direction: column;
-    }
-
-    .bycycle li {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
 }
+
