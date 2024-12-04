@@ -74,17 +74,58 @@
 		            delay: 0,
 		            duration: .5,
 		            scrollTrigger: {
-			        trigger: 'bike1',
-			        start: 'top center',
-			        markers: true,
+			            trigger: 'bike1',
+			            start: 'center center',
+			            markers: true,
 		            },
-		        stagger: {
+		            stagger: {
+			            each: .5,
+			            from: 'start',
+		            }
+	            }
+            );
+            gsap.fromTo( '.bike2',
+	            {
+		            y: "100%",
+		            autoAlpha: 0
+	            },
+	            {
+		            y: 0,
+		            autoAlpha: 1,
+		            delay: 0,
+		            duration: .5,
+		            scrollTrigger: {
+			            trigger: 'bike1',
+			            start: 'center center',
+			            markers: true,
+		            },
+		            stagger: {
+			            each: .5,
+			            from: 'start',
+		            }
+	            }
+            );            
+            gsap.fromTo( '.bike3',
+	            {
+		            x: "100%",
+		            autoAlpha: 0
+	            },
+	            {
+		            x: 0,
+		            autoAlpha: 1,
+		            delay: 0,
+		            duration: .5,
+		            scrollTrigger: {
+			            trigger: 'bike1',
+			            start: 'center center',
+			            markers: true,
+		            },
+		            stagger: {
 			        each: .5,
 			        from: 'start',
 		            }
 	            }
             );
-
         </script>
         </body>
 </html>
