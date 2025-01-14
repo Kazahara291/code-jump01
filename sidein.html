@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 1000px;
+        }
+
+        footer {
+            height: 1000px;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row;
+        }
+
+        div ul li {
+            list-style: none;
+        }
+        
+        .box {
+            border: solid #000;
+            background-color: #000;
+            width: 200px;
+            height: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div>
+            <ul>
+                <li class="box js-box1"></li>
+                <li class="box js-box2"></li>
+            </ul>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script> 
+    <script type="module" src="/js/main.js"></script>
+    <script>
+        gsap.fromTo( '.js-box1',
+	    {
+		    x: "0",
+		    autoAlpha: 0,
+	    },
+	    {
+		    x: "0",
+		    autoAlpha: 1,
+		    delay: 0,
+		    duration: .5,
+		    scrollTrigger: {
+			    trigger: '.js-box1',
+			    start: 'center center',
+			    markers: false
+		    },
+		    stagger: {
+			    each: .5,
+			    from: 'start',
+		    }
+	    }
+        );
+        gsap.fromTo( '.js-box2',
+	    {
+		    x: "500%",
+		    autoAlpha: 0,
+	    },
+	    {
+		    x: "0",
+		    autoAlpha: 1,
+		    delay: 0,
+		    duration: .5,
+		    scrollTrigger: {
+			    trigger: '.js-box2',
+			    start: 'center center',
+			    markers: false
+		    },
+		    stagger: {
+			    each: .5,
+			    from: 'start',
+		    }
+	    }
+        );
+    </script>
+</body>
+</html>
